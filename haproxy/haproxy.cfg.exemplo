@@ -1,0 +1,30 @@
+global
+	maxconn 100
+
+defaults
+	mode http
+	timeout connect 5s
+	timeout client 5s
+	timeout server 5s
+
+listen stats 
+   bind :1936
+   mode http
+   stats enable
+   stats hide-version
+   stats realm Haproxy\ Statistics
+   stats uri /
+   stats auth myUser:myPassword
+
+frontend http-in
+	# primary cert is /etc/cert/server.pem
+	# /etc/cert/certdir/ contains additional certificates for SNI clients
+#	bind :443 ssl crt /etc/cert/server.pem crt /etc/cert/certdir/
+	bind :80
+	default_backend http-backend
+
+backend http-backend
+	# a http backend
+	server web1 web1:80 check
+	# a https backend
+#	server s4 10.0.0.3:443 ssl verify none

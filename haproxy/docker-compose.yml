@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  haproxy:
+    image: haproxy:1.7.3-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+      - "1936:1936"
+    volumes:
+      - vol-haproxy:/usr/local/etc/haproxy/:ro
+  
+  web1:
+    image: tutum/hello-world
+
+  web2:
+    image: tutum/hello-world
+
+#  rsyslog:
+#    image: voxxit/rsyslog
+
+volumes:
+  vol-haproxy:
+    external: true
+
+networks:
+  default:
+    external:
+      name: net-web
