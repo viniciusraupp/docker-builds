@@ -2,7 +2,7 @@ version: "3"
 
 services:
   haproxy:
-    image: haproxy:1.7.3-alpine
+    image: ifrscanoas/haproxy:latest
     ports:
       - "80:80"
       - "443:443"
@@ -16,11 +16,15 @@ services:
   web2:
     image: tutum/hello-world
 
-#  rsyslog:
-#    image: voxxit/rsyslog
+  rsyslog:
+    image: ifrscanoas/rsyslog
+    volumes:
+      - vol-haproxy-log:/var/log/:rw
 
 volumes:
   vol-haproxy:
+    external: true
+  vol-haproxy-log:
     external: true
 
 networks:

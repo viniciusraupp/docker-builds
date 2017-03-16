@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  rsyslog-pf:
+    build: .
+    ports:
+      - "514:514/tcp"
+      - "514:514/udp"
+    volumes:
+      - vol-rsyslog-pfsense:/var/log/:rw
+
+volumes:
+  vol-rsyslog-pfsense:
+    external: true
+
+#networks:
+#  default:
+#    external:
+#      name: net-web
