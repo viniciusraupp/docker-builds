@@ -1,5 +1,5 @@
 FROM alpine:3.5
-
+# Referencia https://github.com/docker-library/haproxy.git
 ENV HAPROXY_MAJOR 1.7
 ENV HAPROXY_VERSION 1.7.3
 ENV HAPROXY_MD5 fe529c240c08e4004c6e9dcf3fd6b3ab
