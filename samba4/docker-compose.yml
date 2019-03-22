@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+    samba4: 
+      image: ifrscanoas/samba4-dev:latest
+      ports:
+        - 389:389
+        - 636:636
+      cap_add:
+        - SYS_ADMIN
+      volumes:
+        - sambadir:/usr/local/samba/
+volumes:
+  sambadir:

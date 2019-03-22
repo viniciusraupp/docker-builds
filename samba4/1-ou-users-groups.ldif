@@ -1,0 +1,111 @@
+# Unidades Organizacionais basicas.
+dn: OU=administrativos,DC=ad,dc=campus,DC=ifrs,DC=edu,DC=br
+objectClass: organizationalUnit
+objectClass: top
+ou: administrativos
+distinguishedName: OU=administrativos,DC=ad,dc=campus,DC=ifrs,DC=edu,DC=br
+name: administrativos
+description: administrativos
+
+dn: OU=professores,DC=ad,dc=campus,DC=ifrs,DC=edu,DC=br
+objectClass: organizationalUnit
+objectClass: top
+ou: professores
+distinguishedName: OU=professores,DC=ad,dc=campus,DC=ifrs,DC=edu,DC=br
+name: professores
+description: professores
+
+dn: OU=alunos,DC=ad,dc=campus,DC=ifrs,DC=edu,DC=br
+objectClass: organizationalUnit
+objectClass: top
+ou: alunos
+distinguishedName: OU=alunos,DC=ad,dc=campus,DC=ifrs,DC=edu,DC=br
+name: alunos
+description: alunos
+
+# Unidade Organizacionai para armazenar todos os grupos criados pelo administador do sistema.
+dn: OU=groups,DC=ad,dc=campus,DC=ifrs,DC=edu,DC=br
+objectClass: organizationalUnit
+objectClass: top
+ou: groups
+distinguishedName: OU=groups,DC=ad,dc=campus,DC=ifrs,DC=edu,DC=br
+name: groups
+description: groups
+
+
+# Grupos.
+dn: CN=cti,OU=groups,DC=ad,DC=campus,DC=ifrs,DC=edu,DC=br
+objectClass: group
+objectClass: top
+cn: cti
+description: Coordenadoria de TI
+distinguishedName: CN=cti,OU=groups,DC=ad,DC=campus,DC=ifrs,DC=edu,DC=br
+name: cti
+sAMAccountName: cti
+
+dn: CN=dap,OU=groups,DC=ad,DC=campus,DC=ifrs,DC=edu,DC=br
+objectClass: group
+objectClass: top
+cn: dap
+description: Diretoria de Administração
+distinguishedName: CN=dap,OU=groups,DC=ad,DC=campus,DC=ifrs,DC=edu,DC=br
+name: dap
+sAMAccountName: dap
+
+dn: CN=comunicacao,OU=groups,DC=ad,DC=campus,DC=ifrs,DC=edu,DC=br
+objectClass: group
+objectClass: top
+cn: comunicacao
+description: Comunicação
+distinguishedName: CN=comunicacao,OU=groups,DC=ad,DC=campus,DC=ifrs,DC=edu,DC=br
+name: comunicacao
+sAMAccountName: comunicacao
+
+dn: CN=cgp,OU=groups,DC=ad,DC=campus,DC=ifrs,DC=edu,DC=br
+objectClass: group
+objectClass: top
+cn: cgp
+description: Coordenadoria de Gestão de Pessoas
+distinguishedName: CN=cgp,OU=groups,DC=ad,DC=campus,DC=ifrs,DC=edu,DC=br
+name: cgp
+sAMAccountName: cgp
+
+# Usuarios.
+
+dn: CN=Renato Branco,OU=administrativos,DC=ad,DC=campus,DC=ifrs,DC=edu,DC=br
+objectClass: user
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Renato Branco
+displayName: Renato Branco
+distinguishedName: CN=Renato Branco,OU=administrativos,DC=ad,DC=campus,DC=ifrs,DC=edu,DC=br
+givenName: Renato
+mail: renato.branco@ad.campus.ifrs.edu.br
+name: Renato Branco
+sAMAccountName: renato.branco
+sn: Branco
+userAccountControl: 66050
+userPrincipalName: renato.branco@ad.campus.ifrs.edu.br
+description: Usuário inicialmente desabilitado.
+
+dn: CN=Felipe Santos,OU=administrativos,DC=ad,DC=campus,DC=ifrs,DC=edu,DC=br
+objectClass: user
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Felipe Santos
+displayName: Felipe Santos
+distinguishedName: CN=Felipe Santos,OU=administrativos,DC=ad,DC=campus,DC=ifrs,DC=edu,DC=br
+givenName: Felipe
+mail: felipe.santos@ad.campus.ifrs.edu.br
+name: Felipe
+sAMAccountName: felipe.santos
+sn: Santos
+userAccountControl: 66048
+userPrincipalName: felipe.santos@ad.campus.ifrs.edu.br
+description: Usuário inicialmente habilitado.
+
+
+
+

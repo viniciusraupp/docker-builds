@@ -1,0 +1,8 @@
+# bin/ldbmodify -H private/sam.ldb 2-member-groups.ldif
+#
+# Membros em grupos.
+#
+dn: CN=cgp,OU=groups,DC=ad,DC=campus,DC=ifrs,DC=edu,DC=br
+changetype: modify
+add: member
+member: CN=Renato Branco,OU=administrativos,DC=ad,DC=campus,DC=ifrs,DC=edu,DC=br
