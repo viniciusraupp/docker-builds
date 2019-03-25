@@ -39,4 +39,4 @@ COPY ./2-member-groups.ldif .
 RUN chmod 777 ./run.sh
 
 ENTRYPOINT ["./run.sh"]
-CMD ["/usr/local/samba/sbin/samba", "-F","-d4"]
+CMD ["/usr/local/samba/sbin/samba", "-i", "-M", "single","-d2"]
